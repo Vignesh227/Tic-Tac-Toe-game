@@ -35,7 +35,7 @@ class TicTacToe{
         changeColor(12);
         cout<<"\n\t\t X -> ";changeColor(7);cout<<" PLAYER 1";
         changeColor(11);
-        cout<<"\t\t    Y -> ";changeColor(7);cout<<" PLAYER 2";
+        cout<<"\t\t    O -> ";changeColor(7);cout<<" PLAYER 2";
         changeColor(7);
         cout<<"\n\n   ";
     }
@@ -65,6 +65,7 @@ void TicTacToe::declare(){
 }
 void TicTacToe::display()
 {
+    cout<<"\n move : "<<movecount<<"\n game : "<<game_length_count<<endl;
     cout<<"\t\t\t\t ";
 
     // To display column numbers above the board
@@ -156,7 +157,7 @@ void TicTacToe::getmoves(){
         changeColor(11);
         cout<<"\n\n\t\t\t\tPLAYER 2's MOVE \n"; changeColor(7);
         cout<<"\n\t\tEnter the ROW index where you want to mark ";
-        changeColor(11);cout<<"Y ";changeColor(7); cout<<" : ";
+        changeColor(11);cout<<"O ";changeColor(7); cout<<" : ";
 
         while(!(cin>>row)) //If the input is not integer
         {
@@ -165,12 +166,12 @@ void TicTacToe::getmoves(){
             notvalid_display();
 
             cout<<"\n\t\tEnter the ROW index where you want to mark ";
-            changeColor(11);cout<<"Y ";changeColor(7); cout<<" : ";
+            changeColor(11);cout<<"O ";changeColor(7); cout<<" : ";
 
         }
 
         cout<<"\t\tEnter the COL index where you want to mark ";
-        changeColor(11);cout<<"Y ";changeColor(7); cout<<" : ";
+        changeColor(11);cout<<"O ";changeColor(7); cout<<" : ";
 
         while(!(cin>>col)) //If the input is not integer
         {
@@ -179,14 +180,14 @@ void TicTacToe::getmoves(){
             notvalid_display();
 
             cout<<"\n\t\tEnter the COL index where you want to mark ";
-            changeColor(11);cout<<"Y ";changeColor(7); cout<<" : ";
+            changeColor(11);cout<<"O ";changeColor(7); cout<<" : ";
 
         }
         cout<<endl;
         if(row<0 || col<0 || row>2 || col>2 || TTT[row][col]!='\0')
             notvalid_display();
         else{
-            TTT[row][col] = 'Y';
+            TTT[row][col] = 'O';
             display();  //display the board
 
             if(movecount > game_length_count-5){
@@ -211,8 +212,7 @@ bool TicTacToe::check_winner(){
     {
         // Condition to check in 8 directions ( X and + )
         if(top_left_to_bottom_right() || top_right_to_bottom_left() ||
-           top_to_bottom_one() || top_to_bottom_two() || top_to_bottom_three()
-           || left_to_right_top() || left_to_right_middle() || left_to_right_bottom())
+            top_to_bottom_two() || left_to_right_middle())
             return true;
     }
 
@@ -393,7 +393,7 @@ void TicTacToe::play_again()
         cout<<"\n\t\t\t THANKS FOR ";changeColor(10);
         cout<<"PLAYING TIC TAC TOE !!\n\n";changeColor(7);
 
-        cout<<"\n\n Developed by : T. VIGNESH PANDIAN \n";
+        cout<<"\n\n Developed by : VIGNESH PANDIAN \n";
         cout<<"\n Follow me @ \n Github -> https://github.com/Vignesh227/ ";
         cout<<"\n LinkedIn -> https://www.linkedin.com/in/vignesh-pandian-858547229/ \n";
         //separator line
@@ -416,8 +416,10 @@ int main()
         else{
             changeColor(10);
             cout<<"\n\n\t\t\t\t   MATCH DRAW ";
+
             changeColor(7);
             obj.play_again();
+            obj.movecount++;
         }
     }
     return 0;

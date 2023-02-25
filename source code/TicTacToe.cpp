@@ -106,15 +106,35 @@ void TicTacToe::getmoves(){
         cout<<"\n\t\tEnter the ROW index where you want to mark ";
         changeColor(12);cout<<"X ";changeColor(7); cout<<" : ";
 
-        cin>>row;
+        while(!(cin>>row)) //If the input is not integer
+        {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            notvalid_display();
+
+            cout<<"\n\t\tEnter the ROW index where you want to mark ";
+            changeColor(12);cout<<"X ";changeColor(7); cout<<" : ";
+
+        }
 
         cout<<"\t\tEnter the COL index where you want to mark ";
         changeColor(12);cout<<"X ";changeColor(7); cout<<" : ";
 
-        cin>>col; cout<<endl;
+        while(!(cin>>col))  //If the input is not integer
+        {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            notvalid_display();
+
+            cout<<"\n\t\tEnter the COL index where you want to mark ";
+            changeColor(12);cout<<"X ";changeColor(7); cout<<" : ";
+
+        }
+
+        cout<<endl;
 
         // Check if the move is invalid
-        if(row<0 || col<0 || row>3 || col>3 || TTT[row][col]!='\0')
+        if(row<0 || col<0 || row>2 || col>2 || TTT[row][col]!='\0')
             notvalid_display();
 
         else{
@@ -137,13 +157,32 @@ void TicTacToe::getmoves(){
         cout<<"\n\t\tEnter the ROW index where you want to mark ";
         changeColor(11);cout<<"Y ";changeColor(7); cout<<" : ";
 
-        cin>>row;
+        while(!(cin>>row)) //If the input is not integer
+        {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            notvalid_display();
+
+            cout<<"\n\t\tEnter the ROW index where you want to mark ";
+            changeColor(11);cout<<"Y ";changeColor(7); cout<<" : ";
+
+        }
 
         cout<<"\t\tEnter the COL index where you want to mark ";
         changeColor(11);cout<<"Y ";changeColor(7); cout<<" : ";
 
-        cin>>col; cout<<endl;
-        if(row<0 || col<0 || row>3 || col>3 || TTT[row][col]!='\0')
+        while(!(cin>>col)) //If the input is not integer
+        {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            notvalid_display();
+
+            cout<<"\n\t\tEnter the COL index where you want to mark ";
+            changeColor(11);cout<<"Y ";changeColor(7); cout<<" : ";
+
+        }
+        cout<<endl;
+        if(row<0 || col<0 || row>2 || col>2 || TTT[row][col]!='\0')
             notvalid_display();
         else{
             TTT[row][col] = 'Y';

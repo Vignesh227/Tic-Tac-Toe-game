@@ -65,7 +65,6 @@ void TicTacToe::declare(){
 }
 void TicTacToe::display()
 {
-    cout<<"\n move : "<<movecount<<"\n game : "<<game_length_count<<endl;
     cout<<"\t\t\t\t ";
 
     // To display column numbers above the board

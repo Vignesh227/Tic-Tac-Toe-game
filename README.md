@@ -9,7 +9,4 @@ A Two Player Tic Tac Toe Game, developed in C++
 ![image](https://user-images.githubusercontent.com/96369223/221354897-cf2c0f2a-51f5-4455-8aa1-a012e262aa59.png)
 ![image](https://user-images.githubusercontent.com/96369223/221354943-fe5de1fa-2d97-4b3d-824e-89c5acc86f52.png)
 
-## Invalid moves:
-
-![image](https://user-images.githubusercontent.com/96369223/221355065-578fb664-d930-4346-8c6a-9bb73cd1e46d.png)
 

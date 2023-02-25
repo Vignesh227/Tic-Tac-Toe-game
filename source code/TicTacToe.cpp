@@ -14,6 +14,7 @@ using namespace std;
 
 // Function to change text color //
 // 7 -> White
+// 10-> Green
 // 11-> Blue
 // 12-> Red
 // 14-> Yellow

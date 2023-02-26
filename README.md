@@ -1,7 +1,7 @@
 # Tic-Tac-Toe-game
 A Two Player Tic Tac Toe Game, developed in C++
 
-## Gameplay:
+## Gameplay
 
 ![image](https://user-images.githubusercontent.com/96369223/221359267-73aa3c0a-039c-42c8-a8ca-01c0b0fd2713.png)
 ![image](https://user-images.githubusercontent.com/96369223/221359284-7fb289d5-f04d-465d-9652-96e27ac0c097.png)

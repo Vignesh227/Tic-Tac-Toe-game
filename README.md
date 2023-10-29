@@ -3,6 +3,49 @@
 
 ***
 
+## Problem Statement 
+
+Design a command-line based, 3x3 grid Tic Tac Toe game that can be played by 2-players.
+
+## Requirements 
+
+### Board 
+
+3x3 grid board with the following naming convention for squares of the grid
+
+```
+A1    A2    A3
+B1    B2    B3
+C1    C2    C3
+```
+
+### Players 
+
+Game has 2 players. Every player has a character. The character is by default, “X” and “O” for player 1 and 2.
+
+### Game 
+
+- Game starts with Player 1 inserting their character on one of the boxes 
+- Players get alternative turns, and insert their characters on boxes 
+- On every turn, take command line input of which box to place character
+- After every turn show state of game 
+- After every turn, one of 4 conditions can happen
+  
+  - Player specifies wrong box (already has been used);  
+    In this case, same player will try again 
+  - Placing the character results in game winning condition (specified below);  
+    in this case end the game and declare winner 
+  - Player specifies correct box, but doesn’t win game;  
+    Give turn to other player and continue game  
+  - Board is full (this was last entry), and no winner;  
+    Declare game draw and end game 
+- Winning conditions:   
+  Same character in all boxes of: 
+    - Any row
+    - Any column
+    - Any diagonal 
+
+
 ## Gameplay
 
 ![image](https://user-images.githubusercontent.com/96369223/221359267-73aa3c0a-039c-42c8-a8ca-01c0b0fd2713.png)

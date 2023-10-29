@@ -41,9 +41,9 @@ Game has 2 players. Every player has a character. The character is by default, â
     Declare game draw and end game 
 - Winning conditions:   
   Same character in all boxes of: 
-    - Any row
-    - Any column
-    - Any diagonal 
+    - Any Row
+    - Any Column
+    - Any Diagonal 
 
 
 ## Gameplay

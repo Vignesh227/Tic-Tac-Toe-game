@@ -45,6 +45,7 @@ Game has 2 players. Every player has a character. The character is by default, â
     - Any Column
     - Any Diagonal 
 
+***
 
 ## Gameplay
 
